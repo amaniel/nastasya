@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Психолог Настасья Солдатова, ACT-терапевт. Терапия принятия и ответственности онлайн по всему миру и очно в Нови-Саде.">
+<meta property="og:title" content="Психолог Настасья Солдатова">
+<meta property="og:description" content="ACT-терапевт. Онлайн по всему миру, очно в Нови-Саде.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23FFC94D'/%3E%3C/svg%3E">
+<title>Психолог Настасья Солдатова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap">
+<style>
+/* Layout: airy single column, sun-disc hero with arched portrait, soft tinted bands; left-aligned text */
+:root{
+  --paper:#F5F6F9; --surface:#FFFFFF; --ink:#24233D; --muted:#64637D; --line:rgba(36,35,61,.12);
+  --sun:#FFC94D; --sun-soft:#FFEDBC; --lilac:#ECE8FC; --sky:#E2EEFB; --mint:#E1F1E7;
+  --band:#24233D; --band-ink:#F5F6F9; --band-muted:#B9B8D2;
+  --display:"Unbounded","Onest",system-ui,sans-serif;
+  --body:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r-lg:28px; --r-md:18px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#16162A; --surface:#1F1F36; --ink:#EEEDF8; --muted:#ABA9C7; --line:rgba(238,237,248,.13);
+  --sun:#FFC94D; --sun-soft:#3E3522; --lilac:#29264A; --sky:#1D2B40; --mint:#1C3328;
+  --band:#0F0F1F; --band-ink:#EEEDF8; --band-muted:#A3A1C2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#16162A; --surface:#1F1F36; --ink:#EEEDF8; --muted:#ABA9C7; --line:rgba(238,237,248,.13);
+  --sun:#FFC94D; --sun-soft:#3E3522; --lilac:#29264A; --sky:#1D2B40; --mint:#1C3328;
+  --band:#0F0F1F; --band-ink:#EEEDF8; --band-muted:#A3A1C2; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,42px)}
+h3{font-size:19px}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(64px,9vw,112px)}
+.lead{color:var(--muted);max-width:60ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font:500 16px/1 var(--body);text-decoration:none;transition:transform .15s,background .15s}
+.btn-sun{background:var(--sun);color:#24233D}
+.btn-sun:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font:500 15px/1 var(--display);text-decoration:none}
+.brand i{width:22px;height:22px;border-radius:50%;background:var(--sun);display:block}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-size:15px}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:10px 18px;font-size:14px}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-text{display:grid;gap:24px;min-width:0}
+.role{display:inline-flex;align-self:start;justify-self:start;padding:8px 16px;border-radius:999px;background:var(--sun-soft);font-weight:500;font-size:15px}
+.hero h1{font-size:clamp(40px,6.6vw,80px);font-weight:400;line-height:1.02}
+.hero h1 span{display:block}
+.hero-text .lead{font-size:19px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;padding-top:28px;border-top:1px solid var(--line);margin-top:8px;list-style:none;padding-left:0;margin-bottom:0}
+.facts li{display:grid;gap:2px;font-size:14px;color:var(--muted)}
+.facts b{font:500 22px/1.2 var(--display);color:var(--ink)}
+
+.portrait{position:relative;justify-self:center;width:min(100%,420px);aspect-ratio:4/5;max-width:100%}
+.sun{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,var(--sun) 0 58%,color-mix(in srgb,var(--sun) 35%,transparent) 59% 70%,transparent 71%);right:-12%;top:-8%;animation:rise 1.6s cubic-bezier(.2,.7,.2,1) both}
+.arch{position:absolute;inset:6% 6% 0 0;border-radius:999px 999px var(--r-lg) var(--r-lg);overflow:hidden;background:var(--lilac);display:grid;place-items:center}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.arch .initials{font:400 64px/1 var(--display);color:var(--muted)}
+@keyframes rise{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}html{scroll-behavior:auto}}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{order:-1;width:min(78%,340px)}}
+
+/* about */
+.about{background:var(--surface);border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,88px);margin-top:48px}
+.col{display:grid;gap:40px;align-content:start;min-width:0}
+.block{display:grid;gap:16px}
+.block ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.block li{position:relative;padding-left:22px}
+.block li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--sun)}
+.edu li a{text-decoration-color:var(--line);text-underline-offset:3px}
+.edu li a:hover{text-decoration-color:var(--ink)}
+details summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;margin-top:4px;font-weight:500;color:var(--ink);padding:8px 0}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg) translateX(-2px)}
+details[open] summary .more{display:none}
+details:not([open]) summary .less{display:none}
+details ul{margin-top:12px!important}
+.muted{color:var(--muted);font-size:15px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* values */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.value{padding:28px;border-radius:var(--r-lg);display:grid;gap:10px;align-content:start;min-height:180px}
+.value:nth-child(1){background:var(--sun-soft)}
+.value:nth-child(2){background:var(--lilac)}
+.value:nth-child(3){background:var(--mint)}
+.value:nth-child(4){background:var(--sky)}
+.value:nth-child(5){background:var(--sun-soft)}
+.value:nth-child(6){background:var(--lilac)}
+.value p{color:var(--muted)}
+.value p::first-letter{text-transform:uppercase}
+@media (max-width:860px){.values-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.values-grid{grid-template-columns:1fr}.value{min-height:0}}
+
+/* requests */
+.req-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(32px,5vw,64px);align-items:start}
+.req-head{display:grid;gap:16px;margin-bottom:36px}
+.req-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.req-list li{padding:20px 0;border-bottom:1px solid var(--line);font:400 clamp(18px,2.2vw,22px)/1.35 var(--display)}
+.side{display:grid;gap:16px;min-width:0}
+.af{border-radius:var(--r-md);padding:20px 24px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;gap:14px;font-weight:600;font-size:18px}
+.af i{width:44px;height:22px;border-radius:44px 44px 0 0;background:conic-gradient(from 270deg at 50% 100%,#E5484D 0 30deg,#F78C3A 0 60deg,#F5C842 0 90deg,#4DB86A 0 120deg,#3D8BEB 0 150deg,#8B5CF6 0 180deg,transparent 0);flex:none}
+.af small{display:block;font-weight:400;font-size:14px;color:var(--muted)}
+.no{border-radius:var(--r-md);padding:24px;background:var(--lilac);display:grid;gap:12px}
+.no ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:var(--muted)}
+@media (max-width:860px){.req-grid{grid-template-columns:1fr}}
+
+/* sessions */
+.sessions{background:var(--sky)}
+.sess{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:end;margin-top:48px}
+.price{display:grid;gap:12px}
+.price .dur{color:var(--muted)}
+.price .nums{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 28px;font:400 clamp(52px,8vw,96px)/1 var(--display);letter-spacing:-.03em}
+.price .nums span+span{color:var(--muted);font-size:.55em}
+.formats{display:grid;gap:12px}
+.format{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:20px 24px;background:var(--surface);border-radius:var(--r-md)}
+.format b{font:500 18px/1.2 var(--display)}
+.format span{color:var(--muted);text-align:right}
+.sess-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+@media (max-width:860px){.sess{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews-in{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,72px);align-items:start}
+.reviews-text{display:grid;gap:16px;color:var(--muted);max-width:62ch}
+.reviews-text .btn{justify-self:start;margin-top:8px}
+@media (max-width:860px){.reviews-in{grid-template-columns:1fr}}
+
+/* contacts */
+.contacts{background:var(--band);color:var(--band-ink)}
+.contacts h2{font-size:clamp(34px,5.5vw,64px);font-weight:400}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;align-items:end}
+.c-links{display:grid;gap:8px}
+.c-links a{font:400 clamp(20px,2.6vw,28px)/1.3 var(--display);text-decoration:none;word-break:break-word}
+.c-links a:hover{color:var(--sun)}
+.c-links small{display:block;font:400 14px/1.4 var(--body);color:var(--band-muted);margin-top:16px}
+.c-links small:first-child{margin-top:0}
+.c-meta{display:grid;gap:6px;color:var(--band-muted);justify-items:end;text-align:right}
+.contacts .btn-sun{margin-top:24px}
+footer{background:var(--band);color:var(--band-muted);font-size:14px}
+footer .wrap{padding-block:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:700px){.c-grid{grid-template-columns:1fr}.c-meta{justify-items:start;text-align:left}}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Настасья Солдатова</a>
+    <ul>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#requests">Запросы</a></li>
+      <li><a href="#services">Сессии</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a class="btn btn-sun" href="https://t.me/Solnastya24" target="_blank" rel="noopener">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="role">ACT-терапевт</span>
+        <h1><span>Настасья</span><span>Солдатова</span></h1>
+        <p class="lead">Психолог в направлении АСТ (Acceptance and Commitment Therapy) — терапия принятия и ответственности (ТПО)</p>
+        <div class="actions">
+          <a class="btn btn-sun" href="https://t.me/Solnastya24" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.5 1.2z"/></svg>
+            Записаться на сессию</a>
+          <a class="btn btn-ghost" href="#requests">С чем я работаю</a>
+        </div>
+        <ul class="facts">
+          <li><b>4+ года</b>опыт работы</li>
+          <li><b>400+ часов</b>личной психотерапии</li>
+          <li><b>Регулярные</b>супервизии и интервизии</li>
+        </ul>
+      </div>
+      <div class="portrait">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="arch">
+          <img id="photo" alt="Настасья Солдатова, психолог" data-srcs="photo.jpg">
+          <span class="initials" hidden>НС</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2>Обо мне</h2>
+      <div class="about-grid">
+        <div class="col">
+          <div class="block">
+            <h3>Опыт работы</h3>
+            <ul>
+              <li>Более 4-х лет</li>
+              <li>Регулярные супервизии и интервизии</li>
+              <li>400+ часов личной психотерапии</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Член психологических сообществ</h3>
+            <ul class="edu">
+              <li>Ассоциация специалистов в сфере <a href="https://akpn.org/" target="_blank" rel="noopener">контекстуально-поведенческой науки</a></li>
+              <li>Ассоциация когнитивно-поведенческой психотерапии (<a href="https://associationcbt.ru/" target="_blank" rel="noopener">АКПП</a>)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <h3>Образование</h3>
+            <p class="muted">По ссылкам можно посмотреть дипломы и сертификаты</p>
+            <ul class="edu">
+              <li>Самарский государственный университет: <a href="https://www.b17.ru/foto/vuz/vuz_108702_d9c3fb.jpg" target="_blank" rel="noopener">психология</a></li>
+              <li>Полный курс <a href="https://www.b17.ru/foto/vuz/vuz_sert_558360.jpg" target="_blank" rel="noopener">АСТ в АСП</a></li>
+              <li>Отличный АСТ: <a href="https://www.b17.ru/foto/vuz/vuz_sert_577195.jpg" target="_blank" rel="noopener">продвинутый онлайн-курс по терапии принятия и ответственности для работы с РАС и СДВГ</a></li>
+              <li>Гендерная инконгруэнтность: <a href="https://www.b17.ru/foto/vuz/vuz_sert_390109.jpg" target="_blank" rel="noopener">актуальные подходы в профессиональной помощи</a></li>
+              <li>Курс-тренинг <a href="https://www.b17.ru/foto/vuz/vuz_sert_558362.jpg" target="_blank" rel="noopener">«Навыки мотивационного интервью»</a></li>
+            </ul>
+            <details>
+              <summary><span class="more">Показать ещё 10</span><span class="less">Свернуть</span></summary>
+              <ul class="edu">
+                <li>Стратегия и пошаговая <a href="https://www.b17.ru/foto/vuz/vuz_sert_577186.jpg" target="_blank" rel="noopener">тактика терапии депрессии</a></li>
+                <li>Поведенческая <a href="https://www.b17.ru/foto/vuz/vuz_sert_577189.jpg" target="_blank" rel="noopener">терапия</a></li>
+                <li>КПТ <a href="https://www.b17.ru/foto/vuz/vuz_sert_577188.jpg" target="_blank" rel="noopener">тревожных расстройств</a></li>
+                <li>Когнитивно-поведенческая терапия <a href="https://www.b17.ru/foto/vuz/vuz_sert_577190.jpg" target="_blank" rel="noopener">зависимого поведения</a></li>
+                <li>Оказание психологической помощи в <a href="https://www.b17.ru/foto/vuz/vuz_sert_414499.jpg" target="_blank" rel="noopener">кризисной ситуации</a></li>
+                <li>Техники работы с <a href="https://www.b17.ru/foto/vuz/vuz_sert_454002.jpg" target="_blank" rel="noopener">суицидальным поведением</a></li>
+                <li>VIII научно-практическая конференция «Суицидология: <a href="https://www.b17.ru/foto/vuz/vuz_sert_414492.jpg" target="_blank" rel="noopener">актуальные проблемы, вызовы и современные решения»</a></li>
+                <li>Семинар Людмилы Петрановской <a href="https://www.b17.ru/foto/vuz/vuz_sert_422332.jpg" target="_blank" rel="noopener">«Теория привязанности в работе помогающего специалиста»</a></li>
+                <li>Работа с ценностями в <a href="https://www.b17.ru/foto/vuz/vuz_sert_435613.jpg" target="_blank" rel="noopener">когнитивно-поведенческой терапии Аарона Бека</a></li>
+                <li>Когнитивно-поведенческая терапия при <a href="https://www.b17.ru/foto/vuz/vuz_sert_465158.jpg" target="_blank" rel="noopener">страхе смерти и поиске смысла жизни</a></li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="wrap">
+      <h2>Ценности, которым я&nbsp;следую в&nbsp;работе</h2>
+      <div class="values-grid">
+        <div class="value"><h3>Бережность</h3><p>мне важно создавать безопасное, доверительное пространство</p></div>
+        <div class="value"><h3>Открытость</h3><p>совершенно разным проявлениям индивидуального опыта. Здесь вы не встретите осуждения</p></div>
+        <div class="value"><h3>Инклюзивность</h3><p>буду рада адаптировать формат сессий под любые ваши потребности</p></div>
+        <div class="value"><h3>Доказательность</h3><p>в работе опираюсь на научно обоснованные методы и техники</p></div>
+        <div class="value"><h3>Гибкость</h3><p>к контексту, состоянию, темпу и ритму работы. Можем на Вы и на Ты</p></div>
+        <div class="value"><h3>Корректность</h3><p>опираюсь на профессиональную этику психолога</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requests" style="padding-top:0">
+    <div class="wrap">
+      <div class="req-head">
+        <h2>Запросы, с которыми я&nbsp;работаю</h2>
+        <p class="lead">Бывает сложно облечь своё состояние в конкретный запрос, но вместе мы обязательно разберёмся! Я открыта к любым вопросам и уточнениям.</p>
+      </div>
+      <div class="req-grid">
+        <ul class="req-list">
+          <li>Нейроотличия (СДВГ, РАС)</li>
+          <li>Тревожные, депрессивные состояния разной степени тяжести</li>
+          <li>Развитие психологической гибкости и устойчивости</li>
+          <li>Сложности с адаптацией, жизненные кризисы</li>
+          <li>Апатия, выгорание</li>
+          <li>Принятие себя, самокритика</li>
+        </ul>
+        <aside class="side">
+          <div class="af"><i aria-hidden="true"></i><span>All-friendly</span></div>
+          <div class="no">
+            <h3>Не работаю с:</h3>
+            <ul>
+              <li>людьми до 18 лет</li>
+              <li>расстройствами вследствие употребления ПАВ</li>
+              <li>РПП</li>
+              <li>парами и семьями</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sessions" id="services">
+    <div class="wrap">
+      <h2>Сессии</h2>
+      <div class="sess">
+        <div class="price">
+          <p class="dur">Продолжительность сессии: 50–60 минут</p>
+          <div class="nums"><span>40&nbsp;€</span><span>4000&nbsp;₽</span></div>
+          <p class="muted">Стоимость сессии. Также возможна оплата в лари и динарах</p>
+        </div>
+        <div class="formats">
+          <div class="format"><b>Онлайн</b><span>по всему миру</span></div>
+          <div class="format"><b>Очно</b><span>Сербия, Нови-Сад</span></div>
+        </div>
+      </div>
+      <div class="sess-cta">
+        <a class="btn btn-sun" href="https://t.me/Solnastya24" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.2 1-.9 1.3-1.7.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.5 1.2z"/></svg>
+          Записаться на сессию</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap reviews-in">
+      <h2>Отзывы и&nbsp;рекомендации</h2>
+      <div class="reviews-text">
+        <p>В психологическом сообществе бытуют разные мнения насчёт публикации отзывов клиентов, но я знаю, что для кого-то они могут быть важным ориентиром. В отзывах соблюдена конфиденциальность клиентов, все отзывы опубликованы добровольно и после завершения терапии.</p>
+        <p>Если у вас остаются сомнения — не стесняйтесь мне написать, личное общение позволяет внести ясность.</p>
+        <a class="btn btn-ghost" href="https://www.b17.ru/solnastya24/#otzyv" target="_blank" rel="noopener">Посмотреть отзывы на b17</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <h2>Напишите мне</h2>
+      <div class="c-grid">
+        <div class="c-links">
+          <small>Telegram</small>
+          <a href="https://t.me/Solnastya24" target="_blank" rel="noopener">@solnastya24</a>
+          <small>Email</small>
+          <a href="mailto:nastya1393@list.ru">nastya1393@list.ru</a>
+        </div>
+        <div class="c-meta">
+          <span>Очно: Сербия, Нови-Сад</span>
+          <span>Онлайн: по всему миру</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Настасья Солдатова</span><span>Психолог, ACT-терапевт</span></div></footer>
+
+<script>
+(function(){
+  var img=document.getElementById('photo');
+  var srcs=(img.getAttribute('data-srcs')||'').split('|');var i=0;
+  function next(){
+    if(i<srcs.length){img.src=srcs[i++];}
+    else{img.hidden=true;img.nextElementSibling.hidden=false;}
+  }
+  img.addEventListener('error',next);next();
+})();
+</script>
+
+</body>
+</html>
