@@ -3,4 +3,4 @@
 Статический сайт: один файл `index.html` + фото `photo.jpg`.
 
 1. Фото лежит в `photo.jpg`, чтобы заменить, просто подмените файл.
-2. Деплой: `npx vercel --prod` в этой папке, или перетащите папку на vercel.com/new, или запушьте в GitHub и импортируйте в Vercel. Сборка не нужна (Framework: Other).
+2. Деплой: `npx vercel --prod` в этой папке. Сборка не нужна (Framework: Other).
